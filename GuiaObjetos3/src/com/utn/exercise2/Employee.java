@@ -1,21 +1,21 @@
 package com.utn.exercise2;
 
 public class Employee extends Person {
-    private String timeShift;
+    private TimeShift shift;
     private Double salary;
 
-    public Employee(Integer dni, String name, String surname, String email, String address, String timeShift, Double salary) {
+    public Employee(Integer dni, String name, String surname, String email, String address, TimeShift shift, Double salary) {
         super(dni, name, surname, email, address);
-        this.timeShift = timeShift;
+        this.shift = shift;
         this.salary = salary;
     }
 
-    public String getTimeShift() {
-        return timeShift;
+    public TimeShift getShift() {
+        return shift;
     }
 
-    public void setTimeShift(String timeShift) {
-        this.timeShift = timeShift;
+    public void setShift(TimeShift shift) {
+        this.shift = shift;
     }
 
     public Double getSalary() {
@@ -27,6 +27,6 @@ public class Employee extends Person {
     }
     @Override
     public String toString(){
-        return "[Employee] "+super.toString()+" |Time Shift: "+this.timeShift+" |Salary: $ "+this.salary;
+        return "[Employee] "+super.toString()+" |Time Shift: "+this.shift +" |Salary: $ "+this.salary;
     }
 }

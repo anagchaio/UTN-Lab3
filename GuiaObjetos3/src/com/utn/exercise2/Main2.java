@@ -1,4 +1,5 @@
 package com.utn.exercise2;
+import com.utn.exercise2.TimeShift;
 
 public class Main2 {
     public static int countStudents(Person[] people){
@@ -35,10 +36,10 @@ public class Main2 {
         Student student3 = new Student(37234999,"Luz","Guzman","l.guzman@gmail.com","Calle 123",2016,"Programacion",2500.00);
         Student student4 = new Student(39666333,"Agustin","Fernandez","agustin.fer@gmail.com","Calle 123",2020,"Programacion",2500.00);
 
-        Employee employee1 = new Employee(23444000,"Juan","Gomez","juanjo.go@gmail.com","Calle 123","day",35000.00);
-        Employee employee2 = new Employee(23444000,"Juan","Gomez","juanjo.go@gmail.com","Calle 123","day",35000.00);
-        Employee employee3 = new Employee(23444000,"Juan","Gomez","juanjo.go@gmail.com","Calle 123","day",35000.00);
-        Employee employee4 = new Employee(23444000,"Juan","Gomez","juanjo.go@gmail.com","Calle 123","day",35000.00);
+        Employee employee1 = new Employee(23444000,"Juan","Gomez","juanjo.go@gmail.com","Calle 123",TimeShift.morning,35000.00);
+        Employee employee2 = new Employee(23444000,"Juan","Gomez","juanjo.go@gmail.com","Calle 123",TimeShift.afternoon,35000.00);
+        Employee employee3 = new Employee(23444000,"Juan","Gomez","juanjo.go@gmail.com","Calle 123",TimeShift.night,35000.00);
+        Employee employee4 = new Employee(23444000,"Juan","Gomez","juanjo.go@gmail.com","Calle 123",TimeShift.afternoon,35000.00);
 
         Person people[] = {student1,student2,student3,student4, employee1, employee2, employee3, employee4};
         System.out.println("Number of students: "+countStudents(people));
