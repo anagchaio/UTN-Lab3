@@ -1,2 +1,4 @@
-package com.utn;public class VideoStore {
+package com.utn;
+
+public class VideoStore {
 }
