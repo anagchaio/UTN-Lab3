@@ -2,16 +2,16 @@ package com.utn;
 
 import java.util.Date;
 
-public class BookingInvoice {
+public class Invoice {
     Client client;
     Film film;
-    Date withdrawalDate;
+    Date rentedDate;
     Date returnDate;
 
-    public BookingInvoice(Client client, Film film, Date withdrawalDate, Date returnDate) {
+    public Invoice(Client client, Film film, Date rentedDate, Date returnDate) {
         this.client = client;
         this.film = film;
-        this.withdrawalDate = withdrawalDate;
+        this.rentedDate = rentedDate;
         this.returnDate = returnDate;
     }
 
@@ -31,12 +31,12 @@ public class BookingInvoice {
         this.film = film;
     }
 
-    public Date getWithdrawalDate() {
-        return withdrawalDate;
+    public Date getRentedDate() {
+        return rentedDate;
     }
 
-    public void setWithdrawalDate(Date withdrawalDate) {
-        this.withdrawalDate = withdrawalDate;
+    public void setRentedDate(Date rentedDate) {
+        this.rentedDate = rentedDate;
     }
 
     public Date getReturnDate() {
@@ -52,7 +52,7 @@ public class BookingInvoice {
         return "BookingInvoice{" +
                 "client: " + client.toString() +
                 ", film: " + film.getTitle() +
-                ", withdrawalDate: " + withdrawalDate +
+                ", withdrawalDate: " + rentedDate +
                 ", returnDate: " + returnDate +
                 '}';
     }

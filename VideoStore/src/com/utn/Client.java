@@ -1,5 +1,7 @@
 package com.utn;
 
+import java.util.Objects;
+
 public class Client {
     String name;
     Integer phoneNumber;
@@ -42,5 +44,18 @@ public class Client {
                 ", phoneNumber: " + phoneNumber + '|' +
                 ", address: " + address +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Client)) return false;
+        Client client = (Client) o;
+        return getName().equals(client.getName());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getName());
     }
 }
